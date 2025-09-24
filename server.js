@@ -14,7 +14,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .catch(err => console.log(err));
 
 app.get('/', (req, res) => {
-  res.send('Willkommen zur Rezept Verwaltung!');
+  res.send('Willkommen zur Rezeptverwaltung!');
 });
 
 const PORT = process.env.PORT || 5000;
