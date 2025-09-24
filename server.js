@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB Verbindungs-URL
-const dbURI = 'mongodb://localhost:27017/rezeptverwaltung';
+const dbURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/rezeptverwaltung';
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Datenbank erfolgreich verbunden'))
