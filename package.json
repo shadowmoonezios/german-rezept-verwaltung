@@ -1,0 +1,21 @@
+{
+  "name": "german-rezept-verwaltung",
+  "version": "1.0.0",
+  "description": "Eine Anwendung zur Verwaltung von Rezepten",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently "npm:start" "npm run client""
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9",
+    "jsonwebtoken": "^8.5.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.0"
+  }
+}
