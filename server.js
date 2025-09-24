@@ -11,7 +11,7 @@ const dbURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/rezeptverwal
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Datenbank erfolgreich verbunden'))
-  .catch(err => console.log(err));
+  .catch(err => console.log('Datenbank Verbindungsfehler:', err));
 
 app.get('/', (req, res) => {
   res.send('Willkommen zur Rezeptverwaltung!');
