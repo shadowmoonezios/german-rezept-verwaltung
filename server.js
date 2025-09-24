@@ -10,7 +10,7 @@ app.use(express.json());
 const dbURI = 'mongodb://localhost:27017/rezeptverwaltung';
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('Datenbank verbunden'))
+  .then(() => console.log('Datenbank erfolgreich verbunden'))
   .catch(err => console.log(err));
 
 app.get('/', (req, res) => {
